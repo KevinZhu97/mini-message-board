@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  header 
+    h1= title
+    p Welcome to #{title}
+
+  main
+    .button-container 
+      a(href="/new"): button.compose= "add a post"
+    each message in messages
+        h2= message.text 
+        p.user= message.user 
+        p.added= message.added

@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+    header
+        h1 Speak your mind!
+        p Write what you feel.
+
+    main 
+        section.form-container 
+            form(method='POST' action='/new')
+                input(type="text" placeholder="user" name="title" id="title")
+                textarea(name="text" placeholder="write your thoughts..." cols="30")
+                button(type="submit" id="submit-btn")= 'post'
